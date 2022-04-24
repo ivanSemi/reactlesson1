@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const Button = () => {
+export function Button () {
+    const [count, setCount] = useState(0);
+    const updateCount = () => {
+        setCount((prevCount) => prevCount + 1);
+    }
     return (
-        <div className='button'>
-            Нажми меня
+        <div>
+        <span className='counter'>{count}</span>
+        <div className='button' onClick={updateCount}>Нажми меня</div>
         </div>
     );
 };

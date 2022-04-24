@@ -3,6 +3,7 @@ import Message from "./Message";
 import Button from "./Button";
 
 function App() {
+  // недобавил ветку, поэтому отправляю пул с комментарием, а так же в GB прикладываю ссылку на сам репозиторий
   const nameTxt = "Неизвестный"; 
   return (
     <div className="App">

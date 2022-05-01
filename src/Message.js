@@ -2,9 +2,7 @@ import React from 'react';
 
 const Message = ({props}) => {
     return (
-        <div className='nameTxt'>
-            {props}
-        </div>
+        <span className='nameTxt'>{props}</span>
     );
 };
 

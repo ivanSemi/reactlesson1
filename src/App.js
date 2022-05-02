@@ -1,10 +1,22 @@
 import "./App.css";
 import Message from "./Message";
 import {useEffect, useState } from "react";
+// import {TextField, Button, SendIcon} from "@mui/material";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
 
 function App() {
   const [messageList, setMessageList] = useState([]);
-  const [name, setName] = useState(['Неизвестный']); 
+  const [name, setName] = useState(['']); 
   const [message, setMessage] = useState(['']);
   
   const addMessage = () => {
@@ -28,13 +40,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Приветствую Вас, <Message props={name}/></h1>
-        
+      <ThemeProvider theme={darkTheme}>
+        <h2>Приветствую Вас, <Message name={name}/></h2>
         <div className="input">
-          <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Введите имя"/>
-          <input value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Введите сообщение"/>
+          <TextField value={name} onChange={(e) => setName(e.target.value)} id="standard-basic" label="Введите имя" variant="standard" />
+          <TextField value={message} onChange={(e) => setMessage(e.target.value)} id="standard-basic" label="Введите сообщение" variant="standard" />
         </div>
-        <button className="button" onClick={addMessage}>НАЖМИ МЕНЯ</button>
+        <Button className="button" variant="contained" endIcon={<SendIcon />} onClick={addMessage}>НАЖМИ МЕНЯ</Button>
         <div>
           {messageList.map((itemMessage) => {
             return (
@@ -48,6 +60,7 @@ function App() {
               </div>)
             })}
         </div>
+        </ThemeProvider>
       </header>
     </div>
       );

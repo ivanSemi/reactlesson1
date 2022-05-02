@@ -1,9 +1,17 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
-const Message = ({props}) => {
+const Message = ({name}) => {
     return (
-        <span className='nameTxt'>{props}</span>
+        <span className='nameTxt'>{name}</span>
     );
 };
+
+if (![]){
+    Message.propTypes = {
+        name: PropTypes.string.isRequired
+    }
+}
+
 
 export default Message;

@@ -22,22 +22,6 @@ h1{
   font-family: cursive;
 }
 
-.button {
-  outline: 1px solid;
-  box-sizing: border-box;
-  padding: 8px 50px;
-  border-radius: 30px;
-  cursor: pointer;
-  user-select: none;
-  margin-top: 10px;
-}
-
-.button:hover{
-  background-color: #197019;
-  outline: none;
-  box-sizing: border-box;
-}
-
 .input {
   display: flex;
   flex-direction: column;

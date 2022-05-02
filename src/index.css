@@ -49,6 +49,10 @@ h1{
   justify-content: space-around;
 }
 
+.box:nth-child(2n) {
+  background-color: #747774;
+}
+
 .author {
   font-family: sans-serif;
   color: #197019;

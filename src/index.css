@@ -57,15 +57,16 @@ h1{
   font-family: sans-serif;
   color: #197019;
   font-weight: 500;
-  width: 500px;
-  
+  max-width: 250px;
+  padding: 0 10px;
 }
 
 .message {
   font-family: sans-serif;
   color: #fefffe;
   font-weight: 500;
-  width: 500px;
+  max-width: 250px;
+  padding: 0 10px;
 }
 
 

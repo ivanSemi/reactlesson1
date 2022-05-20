@@ -1,39 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Chats = () => {
-    const [name, setName] = useState('');
-    const [chats, setChats] = useState ([
-        {
-            id: 1,
-            name: 'Apple'
-        },
-        {
-            id: 2,
-            name: 'Banana'
-        },
-        {
-            id: 3,
-            name: 'Orange'
-        },
-    ])
-    return (
-        <div>
-            Chats
-            <input name={name} value={name} onChange={(e)=> setName(e.target.value)} />
-            <button>
-                Создать
-            </button>
-            {chats.map((chat) => {
-                return (
-                    <div key={chat.id}>
-                        <p className='author_name'>
-                            {chat.name}
-                        </p>
-                    </div>
-                );
-            })}
-        </div>
-    );
+  const [name, setName] = useState('');
+  const [chats, setChats] = useState([
+    {
+      id: 1,
+      name: "Apple",
+    },
+    {
+      id: 2,
+      name: "Banana",
+    },
+    {
+      id: 3,
+      name: "Orange",
+    },
+  ]);
+
+  const addHandler = () => {
+      let random = Math.random();
+      let newValue = {
+          id: random,
+          name: name
+      }
+      setChats(prevState => [...prevState, newValue])
+  };
+
+  const deleteHandler = (id) => {
+    let newValue = chats.filter((item) => item.id !== id);
+    setChats(newValue)
+  }
+
+  return (
+    <div className="conteiner_box">
+      <span className="head_name_chats">Chats</span>
+      <input
+        name={name}
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <button onClick={addHandler}>Создать</button>
+      {chats.map((chat) => {
+        return (
+          <div className="author_box" key={chat.id}>
+            <div className="author_name">{chat.name}</div>
+            <div>
+              <button onClick={() => deleteHandler(chat.id)}>x</button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Chats;

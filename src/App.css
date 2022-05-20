@@ -8,9 +8,20 @@
 }
 
 main {
-    margin-bottom: 15px;
+    margin: 15px 0;
+    
 }
+.conteiner_box {
 
+}
+.head_name_chats {
+    padding-right: 15px;
+}
+.author_box {
+    display: flex;
+    margin: 5px 2px 5px 0;
+}
 .author_name {
     color: green;
+    margin-right: 5px;
 }

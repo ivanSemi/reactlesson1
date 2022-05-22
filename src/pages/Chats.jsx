@@ -31,13 +31,19 @@ const Chats = () => {
     setChats(newValue)
   }
 
+  const onChangeName = (e) =>{
+    setName(e.target.value);
+  }
+
+  
+
   return (
     <div className="conteiner_box">
       <span className="head_name_chats">Chats</span>
       <input
         name={name}
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onChange={onChangeName}
       />
       <button onClick={addHandler}>Создать</button>
       {chats.map((chat) => {
@@ -45,7 +51,7 @@ const Chats = () => {
           <div className="author_box" key={chat.id}>
             <div className="author_name">{chat.name}</div>
             <div>
-              <button onClick={() => deleteHandler(chat.id)}>x</button>
+              <button onClick={deleteHandler.bind(null,chat.id)}>x</button>
             </div>
           </div>
         );

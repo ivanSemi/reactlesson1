@@ -12,6 +12,6 @@ export default function IsFive({value}) {
     }
   return (
     <div>{getResult()}</div>
-  )
-}
+  );
+};
 

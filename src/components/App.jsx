@@ -5,7 +5,6 @@ import Layout from "./Layout";
 import Chats from "../pages/Chats";
 import Profile from "../pages/Profile";
 import Counter from "../pages/Сounter"
-import IsFive from "./IsFive";
 import "../App.css";
 
 function App() {

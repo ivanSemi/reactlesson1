@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ThemeContext } from "../context";
 
 const Chats = () => {
+  const theme = useContext(ThemeContext);
   const [name, setName] = useState('');
   const [chats, setChats] = useState([
     {
@@ -38,7 +40,7 @@ const Chats = () => {
   
 
   return (
-    <div className="conteiner_box">
+    <div className="conteiner_box" style={{background: theme.background, color: theme.textColor}}>
       <span className="head_name_chats">Chats</span>
       <input
         name={name}

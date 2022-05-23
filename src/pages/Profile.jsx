@@ -1,8 +1,9 @@
-import React from 'react';
-
-const Profile = () => {
+import React, { useContext } from 'react';
+import { ThemeContext } from "../context";
+const Profile = () => { 
+    const theme = useContext(ThemeContext);
     return (
-        <div>
+        <div style={{background: theme.background, color: theme.textColor}}>
             Profile
         </div>
     );

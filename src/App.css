@@ -38,3 +38,12 @@ main {
     color: green;
     margin-right: 5px;
 }
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.counter> div {
+    padding: 5px 5px;
+}

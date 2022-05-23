@@ -6,7 +6,6 @@ import { ThemeContext, themes } from "../context";
 const Layout = () => {
     
     const [currentTheme, setCurrentTheme] = useState(themes.light);
-
     const toggleTheme = () => {
       setCurrentTheme(prevState => prevState === themes.light ? themes.dark : themes.light);
     }
@@ -22,6 +21,7 @@ const Layout = () => {
             <main>
              <Outlet />
              <button onClick={toggleTheme}>изменить тему</button>
+             
             </main>
             <footer>
                 FOOTER

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { ThemeContext } from "../context";
 
+
 const Chats = () => {
   const theme = useContext(ThemeContext);
   const [name, setName] = useState('');

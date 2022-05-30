@@ -1,0 +1,5 @@
+
+
+
+export const DELETE_MESSEGES = 'DELETE_MESSEGES';
+export const ADD_MESSEGES = 'ADD_MESSEGES';

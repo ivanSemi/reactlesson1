@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body,#root{
+    min-height: 100vh;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header_link {
+    padding-right: 15px;
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+    margin: 15px 0;
+    flex: 1;
+}
+.conteiner_box {
+
+}
+.head_name_chats {
+    padding-right: 15px;
+}
+.author_box {
+    display: flex;
+    margin: 5px 2px 5px 0;
+}
+.author_name {
+    color: green;
+    margin-right: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.counter {
+    display: flex;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.counter> div {
+    padding: 5px 5px;
 }
